@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<title>Testing</title>
+
+	<script type="text/javascript">
+   		var counter=0;
+    	var images=new Array();
+
+		// array of the images
+    	images[0] = 'image1.jpg';
+    	images[1] = 'image2.jpg';
+    	images[2] = 'image3.png';
+
+    	function start(){
+    		setInterval("slide()",2000); // hange image after 2 seconds
+      	}
+
+      	function slide(){
+   			window.counter++;
+   			if (window.counter >= window.images.length) {
+      			window.counter = 0;
+   			}
+   			document.getElementById('imageslide').src=window.images[window.counter];
+		}
+ </script>
+</head>
+
+<body>
+
+	<div id="wrapper">
+      	<div class="slider" >
+          	<img src="image1.jpg" id="imageslide"></img>
+
+          	<script type="text/javascript">
+          	window.onload = start;
+          	</script>
+       	</div>
+    </div>
+
+</body>
+
+</html>
